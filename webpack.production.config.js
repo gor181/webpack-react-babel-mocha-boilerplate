@@ -1,3 +1,5 @@
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var webpack = require('webpack');
 var path = require('path');
 var resolve = function (dir) {
     return path.resolve(__dirname, dir);
@@ -23,6 +25,10 @@ module.exports = {
         }]
     },
     plugins: [
-        new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js')
+        new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js'),
+        new HtmlWebpackPlugin({
+         append: true,
+         template: path.join(__dirname, 'build/index.html')
+     })
     ]
 };

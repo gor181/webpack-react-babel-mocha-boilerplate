@@ -4,7 +4,7 @@
   "description": "Webpack, React, Babel, Mocha + JSDOM boilerplate",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --dev-tool eval --progress --colors --hot --content-base build",
+    "start": "webpack-dev-server --dev-tool eval --progress --colors --hot --content-base build",
     "deploy": "NODE_ENV=production webpack -p --config webpack.production.config.js",
     "test": "mocha app/__tests__/* app/__tests__/**/*"
   },
@@ -17,6 +17,7 @@
     "babel-preset-react": "^6.3.13",
     "babel-register": "^6.4.3",
     "chai": "^3.4.1",
+    "html-webpack-plugin": "2.17.0",
     "jsdom": "^3.1.2",
     "mocha": "^2.3.4",
     "react": "^0.14.6",
